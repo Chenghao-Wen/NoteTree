@@ -1,0 +1,39 @@
+{
+  "name": "root",
+  "files": [],
+  "children": [
+    {
+      "name": "Work and Study",
+      "files": [],
+      "children": [
+        {
+          "name": "Computer Science",
+          "files": [],
+          "children": [
+            {
+              "name": "Dyanmic Programming",
+              "files": ["GaTech"],
+              "children": []
+            },
+            {
+              "name": "Greedy Algorithm",
+              "files": ["GaTech"],
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Mathematic",
+          "files": [],
+          "children": [
+            {
+              "name": "Dyanmic Programming",
+              "files": ["GaTech"],
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
