@@ -1,4 +1,4 @@
-next-frontend/node_modules/
-next-frontend/.next/
-semanticPairing/models/
-backend/node_modules/
+frontend/node_modules/
+frontend/.next/
+backend_python/models/
+backend_nest/node_modules/
