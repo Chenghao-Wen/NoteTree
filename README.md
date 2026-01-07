@@ -155,14 +155,14 @@ This project only supports **Docker Compose** for local development orchestratio
 ### Prerequisites
 
 - [Docker Desktop](https://www.docker.com/products/docker-desktop) (v20.10+)
-- OpenAI API Key (or an LLM Endpoint compatible with the OpenAI protocol, such as LocalAI/Ollama)
+- Ollama API
 
 ### Startup Steps
 
 1.  **Clone the repository**
 
 ```bash
-git clone https://github.com/your-org/notetree.git
+git clone https://github.com/Chenghao-Wen/NoteTree
 cd notetree
 ```
 
@@ -179,8 +179,3 @@ cp .env.example .env
 ```bash
 docker-compose up -d --build
 ```
-
-4.  **Access the services**
-
-| Service Name | Address | Description |
-| :----------- | :------ | :---------- |
