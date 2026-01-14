@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  # --- Database: MongoDB (v6.0) ---
+  mongo:
+    image: mongo:6.0
+    container_name: app-mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password123
+    volumes:
+      - ./data/mongo:/data/db
+    networks:
+      - app-network
+
+  # --- Cache & Queue: Redis (v7.0) ---
+  redis:
+    image: redis:7.0
+    container_name: app-redis
+    restart: always
+    ports:
+      - "6379:6379"
+    # 开启 AOF 持久化，防止数据丢失
+    command: redis-server --appendonly yes
+    volumes:
+      - ./data/redis:/data
+    networks:
+      - app-network
+
+  # --- Tool: Redis GUI ---
+  redis-insight:
+    image: redis/redisinsight:latest
+    container_name: app-redis-insight
+    restart: always
+    ports:
+      - "5540:5540"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
